@@ -4,7 +4,7 @@
     - Framework: is a third-party library taht exposes utility functionalities AND a 'set of rules' (a clear guidance) on how to build your JS application (Functions + Rules);
     - Reactive: Your app is able to react to user input, update the screen dynamically (e.g. to show overlays or input validation erros) -> Look and feel of mobile apps.
     - Web frontends: What the user sees (HTML + CSS + JS, running in the browser of your user)
-    - Mobile app and desktop app feel very "reactive": things happen insantly, you don't wait for new pages to load or actiosn to star.
+    - Mobile app and desktop app feel very "reactive": things happen instantly, you don't wait for new pages to load or actiosn to star.
         - Trandicionally, in web apps, you click a link and wait for a new page to load. You click a button and wait for some action to complete.
         - JS is used to helps us make it reactive "Behind the scenes"
             * But "Just JS" may not be ideal!
