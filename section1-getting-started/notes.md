@@ -14,7 +14,7 @@
 # Different Ways of Using Vue
 - In two main ways:
     1) Control parts of HTML pages or entire pages, some pages only.
-    2) Controle EVERYTHING (teh enrite frontend) of a web application. (Single-Page-Application - SPA).
-    The goal of the course: start first approach tehn move to the second one.
+    2) Controle EVERYTHING (teh entite frontend) of a web application. (Single-Page-Application - SPA).
+    The goal of the course: start first approach then move to the second one.
 
 Obs: "VanillaJS is a name to refer to using plain JavaScript without any additional libraries like jQuery back in the days.
