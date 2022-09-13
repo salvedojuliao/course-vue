@@ -12,5 +12,6 @@
     - Summary:
         - Vue uses declarative approach: we definine the templates, We mark the part that are dynamic and Vue does the rest for us behind the scenes on our behalf; We just declare our goal and don't care about the spets fo getting there. This is the opposite of imperative approacth (with only JS);
 
+    - Imporntat: EVERY APP can be connected ONLY to one part of HTML, that's why we use Id as the CSS selector;
 
 # a
