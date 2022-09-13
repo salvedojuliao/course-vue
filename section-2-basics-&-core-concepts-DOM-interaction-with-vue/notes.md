@@ -7,9 +7,10 @@
 - Methods: allows to define functions
     * IMPORTANT:
     Data itsef was a function a method, and Method takes an object full of methods (tose are tottaly up to me);
+- Data and Interpolation (I'll aways use it)
+
+    - Summary:
+        - Vue uses declarative approach: we definine the templates, We mark the part that are dynamic and Vue does the rest for us behind the scenes on our behalf; We just declare our goal and don't care about the spets fo getting there. This is the opposite of imperative approacth (with only JS);
 
 
-    Data and Interpolation (I'll aways use it)
-
-
-    
+# a

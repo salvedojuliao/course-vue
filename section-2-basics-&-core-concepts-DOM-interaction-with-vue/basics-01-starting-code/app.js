@@ -1,7 +1,9 @@
 const app = Vue.createApp({
     data(){ // data is a key property name that HAVE TO USE
         return {// it aways return an object
-            courseGoal: 'Finish the course and learn Vue!', // the name here it's up to me;
+            courseGoalA: 'Finish the course and learn Vue!', // the name here it's up to me;
+            courseGoalB: '<h2>Master Vue and build amazing apps!',
+            // courseGoalB: '<h2>Master Vue and build amazing apps!</h2>',
             vueLink: 'https://vuejs.org/'
         }; 
     },
@@ -9,9 +11,9 @@ const app = Vue.createApp({
         outputGoal(){
             const randomNumber = Math.random();
             if (randomNumber < 0.5){
-                return 'Learn Vue!';
+                return this.courseGoalA;
             }else{
-                return 'Master Vue!';
+                return this.courseGoalB;
             }
         }
     }
