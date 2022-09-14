@@ -32,5 +32,6 @@
 
         - Important: EVERY APP can be connected ONLY to one part of HTML, that's why we use Id as the CSS selector;
 - Events & Methods: 
-    - I don't need to ruturn something whe I use eventListener;
-- 
+    - I don't need to ruturn something when I use eventListener;
+- Using native event objects:
+    - Read about the property value of input (used in event.target.value of the class's exemple);
