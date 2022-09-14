@@ -22,17 +22,11 @@
       <button v-on:click.right="reduce(5)">Subtract 5</button>
       <p v-once>Starting Counter {{ counter }}</p>
       <p>Result: {{ counter }}</p>
-      <input
-        type="text"
-        v-on:keyup.enter="confirmInput()"
-        v-model="name"
-      />
-      <!-- 
-      V-model = v-bind:value="name" AND
-      v-on:input="setName($event, 'Batista')" -->
-      <button v-on:click="resetInput">Reset input</button>
-      <p>Your Name: {{ outputFullname() }}</p>
-      <form v-on:submit.prevent="submitForm">
+      <input type="text" v-model="name"/>
+      <input type="text" v-model="lastName"/>
+      <button @click="resetInput">Reset input</button>
+      <p>Your Name: {{ fullname }}</p>
+      <form @submit.prevent="submitForm">
         <input type="text" />
         <button>Sing up</button>
       </form>

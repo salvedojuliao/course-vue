@@ -48,4 +48,26 @@ v-on:keydown.enter or v-on:keyuo.enter. However, they alone don't work.
     - keydown: register the caracter after the second one (ther is a delay)
 - v-model (shortcut for v-mind:value and v-on:input)
     - v-model is two-way binding (Data binding + Event Handling)
-- (Methods used for Data Binding: How it workds): Vue can't know if I'm using a function 
+    - <!-- 
+      v-model="name"
+      V-model = v-bind:value="name" AND
+      v-on:input="setName($event, 'Batista')" -->
+- (Methods used for Data Binding: How it workds): Vue can't know if I'm using a function outputFullname(). It loads everytime anything changes on screen;
+- Computer properties: are essentially like methods but one difference: Vue will be aware of thir dependecies and only reexecute them if of the dependecies changes. Now: data, methos and computed(I have to use this name).
+    - I should name computer property just as I name data (cuz it is not a method). We use them like ariable,s like properties; It caches the dependency and recaculate it ONLY when it changes. For performance this is BETTER!
+- Working with Watchers: Watcher is a function that I can call when something changes (yes it can places computed property)
+    - I repeat another data or computed name as a method name inside then i be executed automatically whenere a property of that name changes;and 
+    - IMPORTANT: It's better using computed property when I have two dependecies;
+    - Watcher is better when I have two kind on intent in mind. It is better to update something;
+    - Conclusion: 
+        - Change dynamically? Use computed property
+        - Update something? Use watcher
+
+- Methods vs Computed vs Watch?
+    - Methods: Use for events or data that really needs to be re-evaluated all the time;
+    - Computed: Use for data that depends on other data;
+    - Watch: Use for any non-data update you want to make;
+    - ObsK Checkout this class to remember!
+- Shortandes:
+    - v-on = @
+    - v-bind = :
