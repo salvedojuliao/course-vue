@@ -35,3 +35,9 @@
     - I don't need to ruturn something when I use eventListener;
 - Using native event objects:
     - Read about the property value of input (used in event.target.value of the class's exemple);
+    - I can use $event as argument with eventListener
+- Event modifier:
+    - Using dot after v-on:eventName + '.' + modifiter;
+    - I can have more than one v-on in a line of HTML;
+- Locking Content with v-once:
+    - v-once: a directive the prevent the starting content of something(v-once)
