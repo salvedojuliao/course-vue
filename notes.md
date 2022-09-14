@@ -69,6 +69,11 @@ v-on:keydown.enter or v-on:keyuo.enter. However, they alone don't work.
         - Change dynamically? Use computed property
         - Update something? Use watcher
 
+- About this and that (from assignment 3) from Discord (WhiteLotus):
+    - You still have the wrong idea. this refers to the context of the component in Vue.
+    It's true that the setTimeout function normally creates its own this context but only if it is executing with the traditional function syntax function() {}. The difference is that an arrow function will always use the parent context of this, which in this case is the component.
+    This is the same with javascript
+
 - Methods vs Computed vs Watch?
     - Methods: Use for events or data that really needs to be re-evaluated all the time;
     - Computed: Use for data that depends on other data;
@@ -78,4 +83,4 @@ v-on:keydown.enter or v-on:keyuo.enter. However, they alone don't work.
     - v-on = @
     - v-bind = :
 
-- Dynamic Styling: 
+- Dynamic Styling: I can use arrat syntax to populate classes (and they can be objects too)
