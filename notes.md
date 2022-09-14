@@ -44,3 +44,6 @@
 
 - What is the difference between 'keydown' and 'keyup'? Because both work when I use 'enter' soon after them, just like this:
 v-on:keydown.enter or v-on:keyuo.enter. However, they alone don't work.
+* Answer:
+    - keyup: register the caracter in the same time;
+    - keydown: register the caracter after the second one (ther is a delay)
