@@ -18,6 +18,7 @@
     * CONCLUSION: Using Vue makes everybody be in the same page!
 
 # Section 2:
+
 - To start:
     - I need to create a Vue App, this is aways the first sep: I control a part of HTML using a vue app;
     - Important: If we control a HTML element with Vue, we'll also control all child elements ofthat element!.
@@ -84,3 +85,44 @@ v-on:keydown.enter or v-on:keyuo.enter. However, they alone don't work.
     - v-bind = :
 
 - Dynamic Styling: I can use arrat syntax to populate classes (and they can be objects too)
+
+
+    - Summary:
+    - DOM and Templates: Vue can be used to define the goal instead of the steps (declarative approach).
+    - Connect Vue to HTML via "mount": Vue then renders the real DOM based on the connected template
+
+    - Data and Event Bindings: You can bind data via interpolation ({{}}) or the v-bind (":") directive;
+    - You liste for events via v-on ("@")
+
+    - Reactivity: Vue updates the real DOM for you when bound data changes
+    - Computed properties and watchers allow to react to data changes
+
+    - Styling: Dynamic CSS class and inline style bindings are supported by Vue;
+    - Vue offers multiple special syntaxes (objects-based, array-based) for efficient bindings.
+
+
+
+# Section 3
+- I can ONLy use v-else rigth after a element that uses v-if
+- An alternative to v-f is v-show:
+    - v-if: it infacts remove items from DOM (It can cost performance)
+    - v-show: it just change the visibility: I should use it when an element changes a lot
+
+- v-for: it is like the for structure (repetition)
+    - Remember: We loop, through an array, with the in keyword when using v-for
+    - Index: v-for="(goal, index) in goals" (it shows the index);
+    - Loop thougth objects: 
+    <!-- <li v-for="(value, key) in {Name: 'Max', Age: 21}">{{ key }}: {{ value }</li> -->
+    <!-- <li v-for="value in {name: 'Max', age: 21}">{{ value }}</li> -->
+    - Loop throught numbers:
+     <!-- <li v-for="num in 10">{{num}}</li> -->
+     - Other examples:
+     <!-- <li v-for="goal in goals">{{ goal }}</li> -->
+     <!-- <ul>
+        <li v-for="(value, key) in {Name: 'Max', Age: 21}">{{ key }}: {{ value }}</li>
+        <li v-for="value in {name: 'Max', age: 21}">{{ value }}</li>
+      </ul>
+      <ul>
+        <li v-for="num in 10">{{num}}</li>
+      </ul> -->
+      - Key is a non HTML atribute, it is undestood by vue, it is good for using with v-for;
