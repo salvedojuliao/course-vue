@@ -46,6 +46,12 @@ v-on:keydown.enter or v-on:keyuo.enter. However, they alone don't work.
   * Answer:
     - keyup: register the caracter in the same time;
     - keydown: register the caracter after the second one (ther is a delay)
+    * Discord: You have the javascript events
+        keydown - Key down first multiple keyboard events for as long as a key is down
+        keyup - Key up fires one keyboard event when a key is released
+        keypress - Key press fires one keyboard event when a key is touched
+
+    And you are using a modifier meaning you only want to capture when the enter key is down. Although I'm not sure if I answered your question. 
 - v-model (shortcut for v-mind:value and v-on:input)
     - v-model is two-way binding (Data binding + Event Handling)
     - <!-- 
@@ -68,6 +74,8 @@ v-on:keydown.enter or v-on:keyuo.enter. However, they alone don't work.
     - Computed: Use for data that depends on other data;
     - Watch: Use for any non-data update you want to make;
     - ObsK Checkout this class to remember!
-- Shortandes:
+- Shorthands:
     - v-on = @
     - v-bind = :
+
+- Dynamic Styling: 
