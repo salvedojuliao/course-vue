@@ -41,9 +41,11 @@
     - I can have more than one v-on in a line of HTML;
 - Locking Content with v-once:
     - v-once: a directive the prevent the starting content of something(v-once)
-
 - What is the difference between 'keydown' and 'keyup'? Because both work when I use 'enter' soon after them, just like this:
 v-on:keydown.enter or v-on:keyuo.enter. However, they alone don't work.
-* Answer:
+  * Answer:
     - keyup: register the caracter in the same time;
     - keydown: register the caracter after the second one (ther is a delay)
+- v-model (shortcut for v-mind:value and v-on:input)
+    - v-model is two-way binding (Data binding + Event Handling)
+- (Methods used for Data Binding: How it workds): Vue can't know if I'm using a function 
