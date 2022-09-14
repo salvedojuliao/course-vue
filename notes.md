@@ -41,3 +41,6 @@
     - I can have more than one v-on in a line of HTML;
 - Locking Content with v-once:
     - v-once: a directive the prevent the starting content of something(v-once)
+
+- What is the difference between 'keydown' and 'keyup'? Because both work when I use 'enter' soon after them, just like this:
+v-on:keydown.enter or v-on:keyuo.enter. However, they alone don't work.
