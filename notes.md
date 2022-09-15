@@ -126,3 +126,22 @@ v-on:keydown.enter or v-on:keyuo.enter. However, they alone don't work.
         <li v-for="num in 10">{{num}}</li>
       </ul> -->
       - Key is a non HTML atribute, it is undestood by vue, it is good for using with v-for;
+
+      - Summary:
+
+        - Conditional Content: 
+            - v-if (and v-show) allows you to render a content only if a certain contition is met
+            - v-if can be combined with v-else and v-else-if (only on diret sibling elements!)
+
+        - Lists: 
+            - v-for can be used to render multiple elements dynamically
+            - v-for can be used with arrays, objects and ranges (numbers).
+
+        - v-for Variations:
+            - You can extact values, values and indexes or values, keys and indexes
+            - if you need v-for and v-if, DON'T use them on the same element. Use a wrapper with v-if instead
+
+
+        - Keys:
+            - Vue re-uses DOM elements to optimize performance -> This can lead to bugs if elements contain state
+            - Bind the jey attribute to an unique value to help Vue identify elements that belong to list content
