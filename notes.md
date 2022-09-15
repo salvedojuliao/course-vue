@@ -103,6 +103,7 @@ v-on:keydown.enter or v-on:keyuo.enter. However, they alone don't work.
 
 
 # Section 3
+
 - I can ONLy use v-else rigth after a element that uses v-if
 - An alternative to v-f is v-show:
     - v-if: it infacts remove items from DOM (It can cost performance)
@@ -145,3 +146,7 @@ v-on:keydown.enter or v-on:keyuo.enter. However, they alone don't work.
         - Keys:
             - Vue re-uses DOM elements to optimize performance -> This can lead to bugs if elements contain state
             - Bind the jey attribute to an unique value to help Vue identify elements that belong to list content
+
+
+# Project:
+- Remember: Everthing is merged (data, methods, computed...)into a behind the scenes managed global object. Therefore I can access methods...everthing.
