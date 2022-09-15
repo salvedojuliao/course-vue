@@ -152,7 +152,7 @@ v-on:keydown.enter or v-on:keyuo.enter. However, they alone don't work.
 - Remember: Everthing is merged (data, methods, computed...)into a behind the scenes managed global object. Therefore I can access methods...everthing.
 
 
-# Section 4
+# Section 5
 - Vue turns your data object into a reactive data object by essentialy wrapping your properties with a JS feature called Proxies.
     - Proxy is used under the hood by Vue. It needs to be notified about new assignments;
 
@@ -191,3 +191,24 @@ v-on:keydown.enter or v-on:keyuo.enter. However, they alone don't work.
     - Virtual DOM: It basically has a copy of DOM. JS-based DOM witch xsist only in memory: Updatesare made to virtual DOM first, only diferences are then rendered to the real DOM
 
 - Vue Instance(app) Lifecyle: Slide is better to see!
+
+# Section 6: Introducing Components
+
+- Compennet is a Vue app(mini app) insed other Vue app (the main one)
+- You might recall lecture 3 ("Different Ways of Using Vue"): You can use Vue.js to control parts of (possibly multiple HTML) pages OR you use it to build so-called "Single Page Applications" (SPAs).
+
+If you control multiple, independent parts of HTML pages, you will often work with multiple Vue apps (i.e. you create multiple apps by calling createApp() more than once).
+
+On the other hand, if you're building a SPA, you typically work with just one "root app" (i.e. createApp() is only used once in your entire codebase) and you instead build up a user interface with multiple components.
+
+You absolutely are allowed to also use components in cases where you have multiple Vue apps but you typically won't use multiple Vue apps if you build one big connected user interface.
+
+Why?
+
+Because Vue apps are independent from each other - they can't really communicate with each other. You might find "hacks" to make it work but there's no great "official" way of sharing data between apps, updating something in app A in case something happens in app B etc.
+
+Components on the other hand - as you will learn soon - DO offer certain communication mechanisms that allow you to exchange data between them. Hence you can build one connected UI if you work with one root app that holds multiple components.
+
+You'll see that in the lectures and throughout the entire course, especially in the course projects of course!
+
+# Section 7: Moving to a better Development Setup & Workflow with the Vue cli
