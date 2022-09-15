@@ -94,9 +94,7 @@ const app = Vue.createApp({
                 actionType: what,
                 actionValue: value
             });
-        }
-     
-        
+        }     
     }
 });
 

@@ -193,8 +193,7 @@ v-on:keydown.enter or v-on:keyuo.enter. However, they alone don't work.
 - Vue Instance(app) Lifecyle: Slide is better to see!
 
 # Section 6: Introducing Components
-
-- Compennet is a Vue app(mini app) insed other Vue app (the main one)
+- Component is a Vue app(mini app) insed other Vue app (the main one)
 - You might recall lecture 3 ("Different Ways of Using Vue"): You can use Vue.js to control parts of (possibly multiple HTML) pages OR you use it to build so-called "Single Page Applications" (SPAs).
 
 If you control multiple, independent parts of HTML pages, you will often work with multiple Vue apps (i.e. you create multiple apps by calling createApp() more than once).
@@ -212,3 +211,6 @@ Components on the other hand - as you will learn soon - DO offer certain communi
 You'll see that in the lectures and throughout the entire course, especially in the course projects of course!
 
 # Section 7: Moving to a better Development Setup & Workflow with the Vue cli
+- A better propper (development) web server includes the possibility of using some (modern JS or Brownser) features.
+- CLI allows us to develop projetcs more realistic and with fundamental resources.
+
