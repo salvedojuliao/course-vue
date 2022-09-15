@@ -150,3 +150,44 @@ v-on:keydown.enter or v-on:keyuo.enter. However, they alone don't work.
 
 # Project:
 - Remember: Everthing is merged (data, methods, computed...)into a behind the scenes managed global object. Therefore I can access methods...everthing.
+
+
+# Section 4
+- Vue turns your data object into a reactive data object by essentialy wrapping your properties with a JS feature called Proxies.
+    - Proxy is used under the hood by Vue. It needs to be notified about new assignments;
+
+- Proxy:
+ - Obs: Js by default IS NOT REACTIVE;
+ - Exemple of Proxy (this is how Vue works, creating 'a lot of' proxies):
+    <!-- const data = {
+    message: 'Hello!',
+    longMessage: 'Hello! Worold!'
+    };
+
+    const handler = {
+    set(target, key, value){
+        if (key === 'message'){
+        target.longMessage = value + 'World!';
+        }
+        target.message = value;
+    }
+    };
+
+    const proxy = new Proxy(data, handler);
+
+    proxy.message = 'Hello!!!';
+
+    console.log(proxy.longMessage);  -->
+ 
+ - One App vs Multiple Apps:
+  - Each app work ALONE! It's all one HTML part per app;
+
+- Understanding Templates: HTML = Template
+
+- Working with Refs: refs is a object full of keys that I can use;
+
+- How Vue updates the Dom:
+    - Vue app sortes data... and browser Dom influenced by its template.
+    - Virtual DOM: It basically has a copy of DOM. JS-based DOM witch xsist only in memory: Updatesare made to virtual DOM first, only diferences are then rendered to the real DOM
+
+- Vue Instance(app) Lifecyle: Slide is better to see!
