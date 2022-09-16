@@ -213,4 +213,8 @@ You'll see that in the lectures and throughout the entire course, especially in 
 # Section 7: Moving to a better Development Setup & Workflow with the Vue cli
 - A better propper (development) web server includes the possibility of using some (modern JS or Brownser) features.
 - CLI allows us to develop projetcs more realistic and with fundamental resources.
+- About Files of Vue (CLI):
+    - npm run serve: execute it aways make changes;
+    - Node_Models: it has everything the app needs;
 
+-
