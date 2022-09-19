@@ -1,3 +1,10 @@
+## Doubts
+    - Class 97 -> Watch it over and over again
+    - Baby steps
+    - Emtis (I did not understeand it)
+    - Search Filter, this, arrow function
+    - A potential problem (Inject and Provide);
+
 # Section 1:
 * What is vue?
 - It is a JS framework that makes building interactive and reactive web frontends
@@ -217,4 +224,160 @@ You'll see that in the lectures and throughout the entire course, especially in 
     - npm run serve: execute it aways make changes;
     - Node_Models: it has everything the app needs;
 
--
+- On App.vue, when I use 'export default' it means when I import it (<!-- import App from './App.vue' -->) on main.js file, I import everthing is inside it, wich is the script.     
+- For naming things, we typically differentiate between 
+    - kebap-case,
+    - PascalCase,
+    - camelCase
+
+- The flow that I learned thus fur: Component > Main.js > App.vue (The last one I release the 'HTML format')
+
+# Section 8: Component Communication & Re-Usable Components 
+*  "Props" (Parent => Child Communication):
+    - Props: is short for properties - it is like custom HTML atributes. Props is like a data! It means i can use them like I use data;
+    - Bug? restart!
+    - We use Props for something called Parent Child Comunication
+    - Props should not be mutated -> Example of 'isFavorite'. I can not change Props in components - So i can change it creating other 'data' to control the data that I can't change. Example of this is in the class 93 - Prop Behavior & Changing Props;
+    - More about Props:
+        In general, you can learn all about prop validation in the official docs: https://v3.vuejs.org/guide/component-props.html
+        Specifically, the following value types (type property) are supported:
+        - String;
+        - Number;
+        - Boolean;
+        - Array;
+        - Object;
+        - Date;
+        - Function;
+        - Symbol.
+        But type can also be any constructor function (built-in ones like Date or custom ones).
+    - I can use v-bind to male props more dynamic;
+        - For example, I can assignment a value for a props on HTML wich come from am external object;
+    - $emit() is a buld in method I can call in from inside a Vue component;
+    - Comunicate component to App: Class 97 (Child to Parent);
+
+* Prop / Event Fallthrough & Binding All Props
+    
+    There are two advanced concepts you also should have heard about:
+
+    Prop Fallthrough
+
+    Binding All Props on a Component
+
+    Prop Fallthrough
+    You can set props (and listen to events) on a component which you haven't registered inside of that component.
+
+    For example:
+
+    BaseButton.vue
+
+    <template>  
+    <button>
+        <slot></slot>
+    </button>
+    </template>
+    
+    <script>export default {}</script>
+    This button component (which might exist to set up a button with some default styling) has no special props that would be registered.
+
+    Yet, you can use it like this:
+
+    <base-button type="submit" @click="doSomething">Click me</base-button>
+    Neither the type prop nor a custom click event are defined or used in the BaseButton component.
+
+    Yet, this code would work.
+
+    Because Vue has built-in support for prop (and event) "fallthrough".
+
+    Props and events added on a custom component tag automatically fall through to the root component in the template of that component. In the above example, type and @click get added to the <button> in the BaseButton component.
+
+    You can get access to these fallthrough props on a built-in $attrs property (e.g. this.$attrs).
+
+    This can be handy to build "utility" or pure presentational components where you don't want to define all props and events individually.
+
+    You'll see this in action the component course project ("Learning Resources App") later.
+
+    You can learn more about this behavior here: https://v3.vuejs.org/guide/component-attrs.html
+
+    Binding all Props
+    There is another built-in feature/ behavior related to props.
+
+    If you have this component:
+
+    UserData.vue
+
+    <template>
+    <h2>{‌{ firstname }} {‌{ lastname }}</h2>
+    </template>
+    
+    <script>
+    export default {
+        props: ['firstname', 'lastname']
+    }
+    </script>
+    You could use it like this:
+
+    <template>
+    <user-data :firstname="person.firstname" :lastname="person.lastname"></user-data>
+    </template>
+    
+    <script>
+    export default {
+        data() {
+        return {
+            person: { firstname: 'Max', lastname: 'Schwarz' }
+        };
+        }
+    }
+    </script>
+    But if you have an object which holds the props you want to set as properties, you can also shorten the code a bit:
+
+    <template>
+    <user-data v-bind="person"></user-data>
+    </template>
+    
+    <script>
+    export default {
+        data() {
+        return {
+            person: { firstname: 'Max', lastname: 'Schwarz' }
+        };
+        }
+    }
+    </script>
+    With v-bind="person" you pass all key-value pairs inside of person as props to the component. That of course requires person to be a JavaScript object.
+
+    This is purely optional but it's a little convenience feature that could be helpful.
+
+    - Assignment:
+        1) I create the components folder
+        2) I create the componentes;
+        3) I create the main vue components (app vue to register them)
+        4) I import the components in to main.js (It means that I allow vue to know the components exist)
+        4) I create a 'tag name' form them and point to the objects(the components)
+
+        Whre do we mangae User Data?
+        - App.vue connects to all components, so it is App.vue;
+        - I prepair the component to receibe data from App.vue (in export default);
+        TIP (Converting a string to a number):
+
+            setUserData(name, age){
+                this.user = {
+                    name: name,
+                    age: +age // it '+' converts to a number
+                }
+    
+    - A potential Problem:
+        - Components that pass throug the Ap..vue is not unrealistic and Vue has a solution to problems like this.
+
+
+    * Summary:
+        - Component Communication Overview: are used to build UIs by combining them; They are 'parent-child' relations and use 'unidirectional data flows' for communication.
+
+        - Props(allow us to passa data from aprent to child): are used to pass data from a parent to a child component. Props should be defined in adcanve, possibily in great detail *type, requiered etc..)
+
+        - Custom Events (child to parent): are emmited (via $emit) to trigger a method in a parent components. They can carry data which ca be used in the called method.
+
+
+        - Provide-Inject: if data needs to be passed across multiple components, you can use provide/ inject. I  can use Provide data in a parent component, inject it into a child component.
+
+    
