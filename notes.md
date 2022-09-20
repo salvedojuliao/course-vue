@@ -4,6 +4,7 @@
     - Emtis (I did not understeand it)
     - Search Filter, this, arrow function
     - A potential problem (Inject and Provide);
+    - Dummy = Fictício
 
 # Section 1:
 * What is vue?
@@ -381,3 +382,21 @@ You'll see that in the lectures and throughout the entire course, especially in 
         - Provide-Inject: if data needs to be passed across multiple components, you can use provide/ inject. I  can use Provide data in a parent component, inject it into a child component.
 
     
+# Section 9: Diving Deeper Into Components
+- Components Registration $ Staling
+- Slots & Dynamic Components
+- Naming & Folder Structure
+
+    * Global vs Local Components: The way I were registering components was the Golbal way (global components).They are available globally. 
+        - Global Components: Components you can use anywhere in your Vue app - i.e. in any tempplate. It means when I have too many global components, the browser will render EVERYTHING...A SUPER LONG LIST.
+        - It is on 'main' I register Global Components and it is on 'App.vue' I register local components;
+
+    - To make local components: I need to create it on Vue.app Once it is made, I can name its `HTML TAG` as I want to us:
+        <script>
+            import TheHeader from './components/TheHeader.vue';
+            export default {
+            components: {
+            'the-header': TheHeader
+            or only TheHeader;
+            },
+        </script>
