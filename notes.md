@@ -390,8 +390,7 @@ You'll see that in the lectures and throughout the entire course, especially in 
     * Global vs Local Components: The way I were registering components was the Golbal way (global components).They are available globally. 
         - Global Components: Components you can use anywhere in your Vue app - i.e. in any tempplate. It means when I have too many global components, the browser will render EVERYTHING...A SUPER LONG LIST.
         - It is on 'main' I register Global Components and it is on 'App.vue' I register local components;
-
-    - To make local components: I need to create it on Vue.app Once it is made, I can name its `HTML TAG` as I want to us:
+        - To make LOCAL COMPONENTS: I need to create it on Vue.app Once it is made, I can name its `HTML TAG` as I want to us:
         <script>
             import TheHeader from './components/TheHeader.vue';
             export default {
@@ -400,3 +399,6 @@ You'll see that in the lectures and throughout the entire course, especially in 
             or only TheHeader;
             },
         </script>
+    
+    * Scoped Styles: If I use the word 'scoped' soon afeter <style> it affects only this component.
+    
