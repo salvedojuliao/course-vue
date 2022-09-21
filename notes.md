@@ -484,5 +484,23 @@ You'll see that in the lectures and throughout the entire course, especially in 
     <keep-alive>
       <component v-bind:is="selectedComponent"> </component>
     <keep-alive>
-  
 
+    And   <teleport to="..."> helps to make a more semantic structure
+
+
+    In vue 2 I need to have one root level element per template and Vue 3 I can have as many topics I want. Fragments.
+  
+    - The Vue Style Guide: Try to follow it!
+
+
+    - Summary (Component Deep Dive):
+        - Component Registration & Styles: Component can be registered globally or locally: Prefer local registration.
+        - Styles can be global or scoped to a component: Prefer scoped for most components.
+        
+        - Slots: Can be used do add a "placeholder" for dynamic HTML code! Multiple, name slot are possible. Default fallbacks can be provided. Scoped slots allw adv. user-cases.
+
+        - Dynamic Components: can be swapped dynamically via the build-int "component" component.
+
+        - Component caching can be added via the "keep alive component"
+
+        Telepor & Style Guide: DOM structue can be manipulated via "teleport" - i keeps the component hierarchy! Consider following the official style guide to keep your code celan and undertandable.
