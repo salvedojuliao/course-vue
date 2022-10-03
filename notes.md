@@ -504,3 +504,14 @@ You'll see that in the lectures and throughout the entire course, especially in 
         - Component caching can be added via the "keep alive component"
 
         Telepor & Style Guide: DOM structue can be manipulated via "teleport" - i keeps the component hierarchy! Consider following the official style guide to keep your code celan and undertandable.
+
+# Section 10: Course Project: The Lerarning Resources App
+- Folder UI: have the commom components
+- Folder laytous: Specific components
+- If I add events in custom components like a 'base button', these events fall through until to the native button on its template. (That's what happens behind the scenes in VUE) 
+- Provide(forneco algo) and Inject (pego esse algo e coloco)
+
+
+
+# Section 11: Forms
+- 
