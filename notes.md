@@ -6,6 +6,9 @@
     - Search Filter, this, arrow function
     - A potential problem (Inject and Provide);
     - Dummy = Fictício
+    - Retrieve  = Recupear
+    - blur event
+    
 
 # Section 1:
 
@@ -292,9 +295,9 @@ You'll see that in the lectures and throughout the entire course, especially in 
   BaseButton.vue
 
     <template>  
-    <button>
-        <slot></slot>
-    </button>
+      <button>
+          <slot></slot>
+      </button>
     </template>
     
     <script>export default {}</script>
@@ -514,4 +517,86 @@ You'll see that in the lectures and throughout the entire course, especially in 
 
 
 # Section 11: Forms
-- 
+- When I use v-model in any input inside of form, the VUE will automatically detect every keystroke, update the value stored in the variable I created in data() and binded with this v-model of the input.
+
+- 142. Working with v-model Modifiers and Numbers
+  - If I use v-model in a input of type number, automatically fetches the user input and converts i from a string to a number of data type nad I If I use refs and Vanilla JS it stored as a String.
+  - The trim() -> remove white spaces at the end and at the start.
+
+- I can use v-model with select in forms
+
+- 144. Using v-model with Checkboxes & Radiobuttons
+  - With checkboxes I need to create a awway to store the selections and I MUST TO CREAT A VALUE for every option
+  - A agree Option receives a Boolean responsve
+
+- 145. Adding Basic Form Validation
+
+- 146. Building a Custom Control Component
+  - In here I used 'active' class;
+  - Remembering: v-model = (@inpput="" and :value="")
+
+- 147. Using v-model on Custom Components
+  - at 05m06s He explains how this dummy application works
+
+- Module Summary:
+  - He used things I already saw before (of course), but I came back after some days (at least one week)
+
+
+# Section 12: Sending HTTPS requests
+- I need to use a service (instead of using/testing locally my applications)
+- Now I'm going to connect it to a Backend
+- Its commom I need a server that holds my data
+- We use Firebase
+
+AXIOS: It is a very popular JavaScript package for sending HTTPP requests from inside JavaScript.
+But we use Fetch (built in Browser)
+
+* GET: For getting data
+* POST: For posting so for sending data
+
+- 155. Http Requests & Http Methods (Verbs)
+  In the last lecture, we sent a POST request to a REST API.
+
+  What is that? A POST request? And a REST API?
+
+  There are different "kinds" of Http requests you could say - defined by the method (POST, GET, DELETE, ...) you attach to them (via the "method" you define on an outgoing request).
+
+  And the server to which you're sending those requests may then react in which ever way it is configured to react to incoming requests with different methods.
+
+  It may store data in a database for an incoming POST request, it may fetch data for a GET request.
+
+  Typically, servers are built to work as a "REST API" - that means they have clearly defined "endpoints" (URL + Http method combinations) for which they do different things.
+
+  You can learn more about REST APIs (and how to build your own one!) with this free series: https://academind.com/learn/node-js/building-a-restful-api-with/what-is-a-restful-api-/
+
+  Also make sure you understand, in general, how the web works: https://academind.com/learn/web-dev/how-the-web-works/ 
+
+- Remember (About fetch)
+  - Fetch() returns a Promise, hence we can use then(), catch() and async/ await there. For Axios, it's just the same - it also returns a Promise.
+
+157. Getting Data (GET Request) & Transforming Response Data
+- The Method 'GET' doesn't require to write (method: GET) because it is the default. In addition, it doesn't need any body and headers for it. I'm just GETTING DATA
+
+
+Fetch returns a promise, so I need to listen to this promise with .then()
+
+- About Function and Arrow Function: When I use arrow functioin, the 'this' insde it refers to same contexts as whtat is inside out of it. But, when I use function(), the 'this' inside this function only refers to the context inside of it.
+
+- 158. Loading Data When a Component Mounts
+
+  - IMPORT IMG (VUE LIFE CIRCLE HERE)
+
+  - Mounted = When the Vue app application be triggered and that means when it's fully initialized.
+
+- 159. Showing a "Loading..." Message
+
+- 160. Handling the "No Data" State
+
+- 161. Handling Technical / Browser-side Errors
+  - catch(), it works when any erros occur in all later .thens;
+
+- 162. Handling Error Responses
+  - I can find problems with browser, the server and the code (For all options I need use tools to handle with all of them)
+
+  - Summary:
+  
