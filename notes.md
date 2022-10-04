@@ -598,5 +598,35 @@ Fetch returns a promise, so I need to listen to this promise with .then()
 - 162. Handling Error Responses
   - I can find problems with browser, the server and the code (For all options I need use tools to handle with all of them)
 
-  - Summary:
-  
+# Section 13: Routing: Building "Multi-Page" Single Page Applications
+- Routing:  "Roteamento"
+
+- 166. What & Why?
+  - With vue we can build client side applications
+  - There is a extra tool (an extra package we can install) that allows us to handle URL changes with JS in the brower and then load somethign different on the screen in the same single page application when that URL changes or based on that URL.
+
+  - 167. Routing Setup
+
+  - 168. Registering & Rendering Routes
+
+  - 169. Navigating with router-link
+    
+  - 170. Styling Active Links
+
+  - 171. Programmatic Navigation
+      methods:{
+          confirmInput(){
+          // do something
+          this.$router.push('/teams');
+        }
+      }
+
+      $rotuer here is able becasue I installed a package
+
+  - 172. Passing Data with Route Params (Dynamic Segments)
+
+  - 76. Passing Params as Props
+    - More challenging
+
+  - 177. Redirecting & "Catch All" Routes
+    - 
