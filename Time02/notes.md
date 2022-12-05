@@ -15,7 +15,7 @@
 
 - I can vue in TWO MAIN WAYS
   1. Vue can be used to CONTROL PARTS of HTML pages or entire pages ('Widget approach')
-  2. Vue can also be used to CONTROL THE ENTIRE FRONTEND of a web application (Single-Page-Application (SPA) approach), here Vue tales over and contols the UI.
+  2. Vue can also be used to CONTROL THE ENTIRE FRONTEND of a web application (Single-Page-Application (SPA) approach), here Vue takes over and contols the UI.
 
 ## 4. Exploring Vue Alternatives
 
@@ -51,9 +51,38 @@
 ## 9. Setting Up the Course Development Environment
 
 ## 10. Course Outline & What's In The Course
-* Basics: Core Syntax, Templates. Directives, Data, Methods, Computed, Properties, Watchers.
-* Intermediate: Components, Component, Communication, Behind the Scenes, Forms, Http, Routing, Animations.
-* Advanced: Vuex, Authentication, Deployment, & Optimization API, Re-using Code.
+
+- Basics: Core Syntax, Templates. Directives, Data, Methods, Computed, Properties, Watchers.
+- Intermediate: Components, Component, Communication, Behind the Scenes, Forms, Http, Routing, Animations.
+- Advanced: Vuex, Authentication, Deployment, & Optimization API, Re-using Code.
 
 ## 11. How To Get The Most Out Of This Course
+
 - Watch the Videos, Code Along, Repeat Concepts, Google and Stackoverflow, Try to help other students.
+
+# SECTION 2: Basic & Core Concepts - DOM Interacion with Vue
+
+## 14. Creating and Connecting Vue App Instances
+
+**_NOTE:_** If I control a HTML element with Vue, I also control all child elements of that element!
+
+- DATA aways return an OBJECT!
+
+## 15. Interpolation and Data Binding
+
+- Interpolation is when I can reference properties that are part of the object I return in 'data':
+
+    <script>
+        const app = Vue.createApp({
+        data() {
+        return {
+        courseGoal: "Finish the course and learn Vue!",
+            };
+        },
+            });
+        app.mount("#user-goal");
+    </script>
+    <p> {{ courseGoal }}</p>
+
+   
+  
