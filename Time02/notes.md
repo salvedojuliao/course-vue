@@ -72,17 +72,15 @@
 
 - Interpolation is when I can reference properties that are part of the object I return in 'data':
 
-    <script>
-        const app = Vue.createApp({
-        data() {
-        return {
-        courseGoal: "Finish the course and learn Vue!",
-            };
-        },
-            });
-        app.mount("#user-goal");
-    </script>
-    <p> {{ courseGoal }}</p>
+<script>
+    const app = Vue.createApp({
+    data() {
+    return {
+    courseGoal: "Finish the course and learn Vue!",
+        };
+    },
+    });
+    app.mount("#user-goal");
+</script>
 
-   
-  
+<p> {{ courseGoal }}</p>
