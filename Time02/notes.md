@@ -72,17 +72,72 @@
 
 - Interpolation is when I can reference properties that are part of the object I return in 'data':
 
-- app.js file:
+    - app.js file:
 
-        const app = Vue.createApp({
-                data() {
-                    return {
-                        courseGoal: "Finish the course and learn Vue!",
-                    };
-                },
-            });
-        app.mount("#user-goal");
+            const app = Vue.createApp({
+                    data() {
+                           return {
+                            courseGoal: "Finish the course and learn Vue!",
+                        };
+                    },
+                });
+            app.mount("#user-goal");
 
-- html.file:
+    - html.file:
 
-         <p> {{ courseGoal }}</p>
+            <p> {{ courseGoal }}</p>
+
+## 16. Binding Attributes with the "v-bind" Directive
+**_NOTE:_** An directive is basicaly an instruction, an instruction we give to Vue to do something.
+- v-bind: is a reserved name that tells Vue 'to bind', 'to set' the value of something (something here is AN ATTRIBUTE on an HTML element). In this class the attribute was 'href'
+- v-bind = ':'
+
+## 17. Understanding "methods" in Vue Apps
+- Methods allows you to define functions which should execute when something happens.
+    - Different of Data (that was a funcion, a method), 'methods' takes an object, which will be full of methods/functions.
+
+- I can point to a methods inside of HTML just like 'interpolation'
+
+## 18. Working with Data inside of a Vue App
+- **_NOTE:_** 'courseGoalA/courseGoalB' is not a constant or variable, it is a property of an object. That is why when I need to connect to it, I need to use 'this', refering to a property of an object, e.g
+
+
+- Object:
+
+        data() {
+            return {
+                courseGoalA: "Finish the course and learn Vue!",
+                courseGoalB: "Master Vue and build amazing apps!",
+                vueLink: 'https://vuejs.org/'
+            }
+        };
+
+- Methods:
+
+        outputGoal() {
+            const randomNumber = Math.random();
+            if (randomNumber < 0.5){
+                return this.courseGoalA;
+            } else {
+                return this.courseGoalB;
+            }
+        }
+
+- **_NOTE:_** Vue takes all the data that I return in data object and merges it into a global vue instance object (into your Vue app object). So behind the scenes there is a sea of objects. That's why I can have access to anything stored in that global object through the key word 'this'.
+
+## 9. Outputting Raw HTML Content with v-html
+- Namely Interpolation and v-bind directive = All most important features and functionalities that are related to outputting data.
+
+- v-html: I set the CONTENT between opening and closing text of an element, but now I tell Vue that the CONTENT should be interpreted as HTML, so it should not be output as text as it is with double curly braces '{{ }}
+
+
+        courseGoalB: "<h3>Master Vue and build amazing apps!</h3>",
+        <p v-html="outputGoal()"></p> 
+
+- In the example above, v-html outputs with the tag "< h3 >".
+- Tip: Try to avoid v-hmtl.
+
+## First Summary: 
+- When I controll a part of HTML, I automatically contrtoll its childs
+- In this Vue controlled HTML code, I can use special features (like interpolation, v-bind or v-html.)
+- Therefore, when we work with Vue, we use a declarative approach (we define a goal/template we wanna have and mark the parts we want and the vue does the rest for us).
