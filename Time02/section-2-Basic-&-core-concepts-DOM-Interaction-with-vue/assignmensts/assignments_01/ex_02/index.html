@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/vue@next" defer></script>
+    <script src="app.js" defer></script>
+    <title></title>
+    <div id="app">
+
+      <nav>
+        <div>
+         <a :href="portalLink"><img v-bind:src="logoImg" alt="Logo"/></a>
+        </div>
+        <ul id="products_list">
+          <li v-for="navItem in navItems"> {{ navItem }}</li>
+        </ul>
+      </nav>
+
+      <header>
+
+        <div id="bind-section">
+          <button @click="changeClass">Change list</button>
+            <div :class="classType">
+                <div v-if="control">
+                  <h2>Cleaning list</h2>
+                  <p v-for="product in produtctsA">{{ product }}</p>
+                </div>
+                <div v-else>
+                  <h2>Kitchen list</h2>
+                  <p v-for="product in produtctsB">{{ product }}</p>
+                </div>
+            </div>
+      
+        </div>
+
+  
+        <!-- Button -->
+        <div>
+          <label for="product">Product:</label>
+          <input type="text" id="product" v-model="enteredValue">
+          <button @click="addProduct" class="productButton">Add Product</button>
+        </div>
+
+        <!-- List -->
+        <div  class="list_products">
+          <ul>
+            <li v-for="product in listProducts"> {{ product }}</li>
+          </ul>
+        </div>
+      </header>
+    </div>
+  </head>
+  <body></body>
+</html>

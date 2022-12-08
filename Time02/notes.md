@@ -89,7 +89,7 @@
 
 ## 16. Binding Attributes with the "v-bind" Directive
 **_NOTE:_** An directive is basicaly an instruction, an instruction we give to Vue to do something.
-- v-bind: is a reserved name that tells Vue 'to bind', 'to set' the value of something (something here is AN ATTRIBUTE on an HTML element). In this class the attribute was 'href'
+- v-bind: is a reserved name that tells Vue 'to bind', 'to set' the value of something (something here is AN ATTRIBUTE on an HTML element). In this video of thhe class the attribute was 'href'
 - v-bind = ':'
 
 ## 17. Understanding "methods" in Vue Apps
@@ -141,3 +141,39 @@
 - When I controll a part of HTML, I automatically contrtoll its childs
 - In this Vue controlled HTML code, I can use special features (like interpolation, v-bind or v-html.)
 - Therefore, when we work with Vue, we use a declarative approach (we define a goal/template we wanna have and mark the parts we want and the vue does the rest for us).
+
+
+
+
+
+### During coding:
+* About v-bind:
+    **_NOTE:_** Using V-BIND I'll always receive an object! It means I can not use an awways on HTML tag like this:
+
+        <!-- WRONG! -->
+        <div v-bind:class="[classState]"> 
+
+        <!-- RIGHT! -->
+        <div v-bind:class="classState"> 
+
+    - The variable I use inside data() wants an String (If I want to add a CSS class) e.g
+
+    app.file:
+
+        data(){
+            return {
+                class: 'classA',
+            };
+        },
+
+    css.file:
+
+        .classA{
+            background-color: blue;
+            height: 60px;
+        }
+
+
+    html.file:
+    
+        <div :class="class">
