@@ -143,6 +143,55 @@
 - Therefore, when we work with Vue, we use a declarative approach (we define a goal/template we wanna have and mark the parts we want and the vue does the rest for us).
 
 
+## 21. Understanding Event Binding
+- v-on: it is the directive that react on 'some event'
+
+     **_NOTE:_** I just declare where I wanna have event listeners and where I wanna output values (which value I should be aware of) and Vue does the rest for me. It means I don't need to code - to make it happens (that is made by Vue, Vue does it for). That's the core feature of the framework. 
+
+     - I declare the goal, Vue manage the rest behidn the scen
+
+     - I'm gonna use methods more with events.
+
+## 23. Working with Event Arguments
+    - 
+
+## 22. Events & Methods
+    - The methods created in this video don't want to return anything, the click listener doesn't a return value.
+    - I can use the name of the (function or method) on tha HTML tag without using parenthesis around it 
+
+
+
+
+    - PAY ATTANTION ON 'this'
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
