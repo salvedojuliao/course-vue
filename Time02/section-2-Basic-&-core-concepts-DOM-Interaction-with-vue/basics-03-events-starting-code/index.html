@@ -19,8 +19,19 @@
     <section id="events">
       <h2>Events in Action</h2>
       <button v-on:click="add(5)">Add 5</button>
-      <button v-on:click="reduce(5)">Reduce 5</button> 
+      <button v-on:click="reduce(5)">Subtract 5</button> 
+      <button v-on:click.rigth="reduce(5)">Subtract 5 (right click)</button> 
+      <p v-once>Starting Counter: {{ counter }}</p>
       <p>Result: {{ counter }}</p>
+      <input type="text" v-on:input="setName($event, 'Batista')" v-on:keyup.enter="confirmInput"><br>
+      <p>Your Name One: {{ confirmedName }}</p><br>
+
+      <input type="text" v-on:input="setNameTwo"> <!-- I am not using the parenthesis neither anything else, I am just point at the function -->
+      <p>Your Name Two: {{ nameTwo }}</p>
+
+      <form v-on:submit.prevent="submitForm">
+        <button>Sign Up</button>
+      </form>
     </section>
   </body>
 </html>

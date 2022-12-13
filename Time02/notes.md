@@ -4,7 +4,7 @@
 
 - It is as JavaScript framework that makes building interactive and reactive web frontends (= browswer-side web applications) easier.
 
-- Framework: It is a (trhid-party) library that exposes utility functionalities AND 'a set of rules' (a clear guidance) on how to build your Javascript application.
+- Framework: It is a (third-party) library that exposes utility functionalities AND 'a set of rules' (a clear guidance) on how to build your Javascript application.
 
 - Reactive: Your app is able to react to user input, update the screen dynamically (e.g to show overlays or input validation erros) -> Look and feel of mobile apps.
 
@@ -152,21 +152,76 @@
 
      - I'm gonna use methods more with events.
 
-## 23. Working with Event Arguments
-    - 
-
 ## 22. Events & Methods
     - The methods created in this video don't want to return anything, the click listener doesn't a return value.
     - I can use the name of the (function or method) on tha HTML tag without using parenthesis around it 
-
-
-
 
     - PAY ATTANTION ON 'this'
 
 
 
+## 24. Using the Native Event Object
+- The event 'input' is the best event to listen to an input HTML element (this is a default Dom event available on input elements);
+    - This event works on every keystroke;
+
+    * HOW DO WE KNOW WHAT THE USER ENTERED (Inside the Input)?
+        - There is a buil-ito js that I can use:
+            - When I add an event listener and then I point at a function/methods that should be executed when that event occurs, that
+            function will automatically get one argument. And that will be an object describing the event that occured. That's why on the method/function we need to add one parameter so that it can receive this argument from de eventLister. 
+                - Ps: I receive the event (that means the argument from the eventListener) always from de browser.
+                - This is important becasue the object will be full of information about the event (which ones I can use on JS or Vue)
+            
+                - In Portuguese: (Se eu adicionAr um eventListener junto com a função que executa ela, essa função recebe um argumento, que será um objeto descrevendo o evento que aconteceu). Por isso que na função (tanto vue quando no js vanilia), eu tenho que por um parâmetro para receber esse argumento do eventLitener. Muitos youtuber usam o nome 'event' ou simplesmente 'e';
+
+
+    **_NOTE:_** If I use the dollar sign inside the HTML tag of eventListener, I still can pass the event arguent and other arguments too e.g.
+
+        
+        HTML.file
+        <input type="text" v-on:input="setName($event, 'Batista')">
+
+        JS.file
+        setName(event, lastName){
+            this.name = event.target.value + ' ' + lastName;
+        }
+
+## 25. Exploring Event Modifiers
+    - When there is a button inside a form (it automatically relond and send a request - in thgis case for a local machine).
+        - So I want to prevent this (that exactly where an Event Modifier can help me)
+
+        app.vue file:
+        event.preventDefault();
+
+        'preventDefault()' is defautl browser mecanism (t is juilt in JavaScript) and I can use Vanilla Javascript.
+
+        Vanilla.js:
+
+        submitForm(event){
+            event.preventDefault();
+            alert('Submitted!');
+        }
     
+        But I can use the Vue Tools for it:
+
+        Vue.js (Using modifier):
+
+            <form v-on:submit.prevent="submitForm">
+
+ **_NOTE:_** I need to add a dot after the 'v-on' and afeter the event to use a modifier, in this case I used the 'prevent' modifier ir order to prevent the browser submit the form:
+    
+    <form v-on:submit.prevent="submitForm">
+
+- I can use different modifier with other events, just like this (I use modifier to change WHEN some events occurs):
+
+        <input type="text" v-on:input="setName($event, 'Batista')" v-on:keyup.enter="confirmInput"><br>
+
+      
+- I CAN USE MORE THAN O EVENT on a tag of HTML
+
+
+## 26. Locking Content with v-once
+- v-onde tells vue that any dynamic data bindings should only be evaluated once.
+
 
 
 
@@ -197,7 +252,7 @@
 
 ### During coding:
 * About v-bind:
-    **_NOTE:_** Using V-BIND I'll always receive an object! It means I can not use an awways on HTML tag like this:
+    **_NOTE:_** Using V-BIND I'll always receive an object! It means I can not use an awway on HTML tag like this:
 
         <!-- WRONG! -->
         <div v-bind:class="[classState]"> 
