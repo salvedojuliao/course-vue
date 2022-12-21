@@ -2,37 +2,37 @@ const app = Vue.createApp({
   data() {
     return {
       counter: 0,
-      name: '',
-      nameTwo: '',
-      confirmedName: ''
+      name: "",
+      nameTwo: "",
+      confirmedName: "",
     };
   },
   methods: {
-    add(num){
+    add(num) {
       this.counter = this.counter + num;
     },
-    reduce(num){
+    reduce(num) {
       this.counter = this.counter - num;
     },
-    setName(event, lastName){
-      this.name = event.target.value + ' ' + lastName;
+    setName(event, lastName) {
+      this.name = event.target.value + " " + lastName;
     },
-    confirmInput(){
+    confirmInput() {
       this.confirmedName = this.name;
     },
-    setNameTwo(e){
+    setNameTwo(e) {
       this.nameTwo = e.target.value;
     },
-    submitForm(){
-      alert('Submitted!');
-    }
+    submitForm() {
+      alert("Submitted!");
+    },
 
     // Vanilla JS:
     // submitForm(event){
     //   event.preventDefault();
     //   alert('Submitted!');
     // }
-  }
+  },
 });
 
-app.mount('#events');
+app.mount("#events");
